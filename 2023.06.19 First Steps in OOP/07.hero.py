@@ -1,0 +1,13 @@
+class Hero:
+    def __init__(self, name: str, health: float):
+        self.name = name
+        self.health = float(health)
+
+    def defend(self, damage):
+        self.health -= float(damage)
+        if self.health <= 0:
+            self.health = 0
+            return f"{self.name} was defeated"
+
+    def heal(self, amount):
+        self.health += float(amount)
